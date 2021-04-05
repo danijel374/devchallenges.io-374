@@ -1,2 +1,103 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
 body {
-  background-color: green; }
+  font-family: "Space Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 2rem 5rem;
+  line-height: 1.5; }
+  @media only screen and (max-width: 1200px) {
+    body {
+      margin: 2rem; } }
+
+.main__content {
+  display: flex;
+  margin-top: 10rem;
+  align-items: center; }
+  @media only screen and (max-width: 1200px) {
+    .main__content {
+      flex-direction: column; } }
+  .main__content > div {
+    margin-left: 5rem; }
+    @media only screen and (max-width: 1200px) {
+      .main__content > div {
+        margin: 0; } }
+
+.main__text {
+  margin-top: 5rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #4f4f4f;
+  width: 70%; }
+  @media only screen and (max-width: 1200px) {
+    .main__text {
+      font-size: 1.8rem; } }
+  @media only screen and (max-width: 1200px) {
+    .main__text {
+      width: 100%; } }
+
+.main__img {
+  max-width: 50%;
+  display: block; }
+  @media only screen and (max-width: 1200px) {
+    .main__img {
+      max-width: 100%; } }
+
+.heading-4 {
+  font-size: 2.4rem;
+  font-family: "Inconsolata", monospace;
+  font-weight: 700;
+  letter-spacing: -3px;
+  color: #333;
+  text-transform: uppercase; }
+  @media only screen and (max-width: 375px) {
+    .heading-4 {
+      font-size: 2.4rem; } }
+
+.heading-2 {
+  font-size: 6.4rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -3px;
+  color: #333; }
+  @media only screen and (max-width: 1200px) {
+    .heading-2 {
+      margin-top: 3rem;
+      font-size: 4.8rem; } }
+
+.footer {
+  font-family: "Montserrat", sans-serif;
+  color: #bdbdbd;
+  font-weight: 500;
+  display: block;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto; }
+
+.username {
+  font-weight: 700; }
+
+.btn {
+  margin-top: 8rem;
+  font-family: "Space Mono", monospace;
+  border: none;
+  outline: none;
+  padding: 2.5rem 3.5rem;
+  background-color: #333;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  transition: all 0.2s; }
+  .btn:hover {
+    background-color: #292929; }
