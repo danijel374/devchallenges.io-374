@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=PT+Serif:wght@400;700&family=Poppins:wght@400;600;700&display=swap");
+:root {
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'PT Serif', serif;
+  --font-tertiary: 'Montserrat', sans-serif; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: var(--font-primary);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.header__title {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: calc(3rem + 0.5vw);
+  margin: 3rem calc(1rem + 2vw); }
+
+.header__content {
+  font-weight: 400;
+  font-size: calc(1.6rem +0.5vw);
+  margin-left: calc(1rem + 2vw); }
+
+.header__subtitle {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: calc(1.5rem + 0.5vw);
+  margin-bottom: 1rem; }
+  @media only screen and (min-width: 1200px) {
+    .header__subtitle {
+      margin: 0 auto;
+      width: 70%; } }
+
+.header p {
+  width: 70%;
+  font-size: calc(1rem + 0.5vw); }
+  @media only screen and (min-width: 1200px) {
+    .header p {
+      margin: 0 auto; } }
+
+@media only screen and (min-width: 1200px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5rem; } }
+
+.members {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-items: center;
+  margin: 3rem calc(1px + 0.5vw); }
+  .members__member:nth-child(2n) {
+    margin-top: calc(3rem + 2vw); }
+  @media only screen and (min-width: 1200px) {
+    .members {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      row-gap: calc(4rem + 2vw); }
+      .members__member:nth-child(2n) {
+        margin: 0; }
+      .members__member:nth-child(2) {
+        margin-top: calc(5rem + 2vw); }
+      .members__member:nth-child(5) {
+        margin-top: calc(5rem + 2vw); } }
+  .members__member {
+    display: flex;
+    width: 90%; }
+    .members__member__per-info {
+      display: flex;
+      flex-direction: column; }
+      .members__member__per-info__img {
+        max-width: 100%; }
+      .members__member__per-info__name {
+        font-weight: 600;
+        margin-top: 1rem;
+        font-size: calc(1rem + 0.5vw); }
+    .members__member__job-info__job {
+      writing-mode: vertical-rl;
+      font-family: var(--font-secondary);
+      font-size: calc(1rem + 0.5vw);
+      text-transform: uppercase;
+      font-weight: 400; }
+
+.footer {
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--font-tertiary);
+  font-weight: 500;
+  color: #a9a9a9;
+  font-size: calc(0.5rem + 0.5vw); }
+  .footer__username {
+    font-weight: 700; }
