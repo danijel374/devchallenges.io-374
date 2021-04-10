@@ -1,0 +1,256 @@
+// BASE
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap');
+
+:root {
+	--font-primary: 'Montserrat', sans-serif;
+	--font-secondary: 'Lora', serif;
+	--font-tertiary: 'Crimson Pro', serif;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+body {
+	font-family: var(--font-primary);
+	background-color: #181719;
+	color: #ffffff;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	line-height: 1.5;
+}
+
+.nav {
+	.logo {
+		padding: 1rem;
+		border: 1px solid rgba(255, 255, 255, 0.767);
+		font-family: var(--font-tertiary);
+		font-weight: 200;
+		font-size: calc(1.2rem + 0.5vw);
+		text-transform: uppercase;
+	}
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin: 4rem;
+
+	&__links {
+		@media only screen and (max-width: 1000px) {
+			display: none;
+		}
+		display: flex;
+		list-style: none;
+
+		&.active {
+			position: fixed;
+			left: 0;
+			top: 0;
+			height: 100vh;
+			width: 100vw;
+			z-index: 10;
+			background-color: #181719;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			& li:not(:last-child) {
+				margin-bottom: 3rem;
+			}
+
+			li {
+				margin-right: 0;
+			}
+		}
+
+		& li:first-child {
+			font-weight: 700;
+			border-bottom: 2px solid #fff;
+		}
+		& > li {
+			text-decoration: none;
+			font-weight: 500;
+			margin-right: 10rem;
+			font-size: calc(1.3rem + 0.5vw);
+
+			& a {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+span.material-icons {
+	display: none;
+
+	@media only screen and (max-width: 1000px) {
+		display: block;
+		cursor: pointer;
+		position: fixed;
+		font-size: 4rem;
+		top: 4rem;
+		right: 4rem;
+		z-index: 20;
+	}
+}
+
+.main {
+	& .modern-interior {
+		display: flex;
+
+		margin: 15rem 5rem;
+
+		margin-bottom: 40rem;
+		@media only screen and (max-width: 1000px) {
+			flex-direction: column;
+			margin: calc(0.5rem + 2vw);
+
+			&__left {
+				margin-bottom: 5rem;
+
+				& p {
+					width: 70%;
+				}
+			}
+		}
+
+		&__right {
+			& .img-container {
+				position: relative;
+				& img {
+					// object-fit: cover;
+					max-width: 100%;
+				}
+
+				& .person {
+					content: '';
+					position: absolute;
+					width: 50%;
+					height: 30%;
+					background-color: #181719;
+					top: 100%;
+					left: 40%;
+					transform: translateY(-50%);
+					display: grid;
+					gap: 3rem;
+
+					grid-template-columns: 1fr 3fr;
+					grid-template-rows: repeat(2, 1fr);
+
+					&__info {
+						font-size: calc(1.2rem + 0.5vw);
+						align-self: center;
+						font-size: calc(1rem + 0.5vw);
+
+						margin-top: 1rem;
+						& p:first-child {
+							font-weight: 500;
+						}
+
+						& p:last-of-type {
+							margin-top: 0.5rem;
+							color: #828282;
+						}
+					}
+
+					&__img {
+						max-width: calc(3rem + 4vw);
+						margin: 3rem;
+						border-radius: 50%;
+						grid-template-columns: 1/2;
+
+						@media only screen and (max-width: 700px) {
+							margin: 2rem;
+							place-self: center;
+						}
+					}
+
+					h2 {
+						margin-left: 3rem;
+						grid-column: 1/-1;
+						font-size: calc(1.5rem + 0.5vw);
+						width: 60%;
+						font-weight: 700;
+						font-family: var(--font-secondary);
+
+						@media only screen and (max-width: 700px) {
+							width: 70%;
+						}
+					}
+
+					@media only screen and (max-width: 1400px) {
+						width: 80%;
+						left: 10%;
+						gap: 1rem;
+
+						h2 {
+							width: 70%;
+							margin-top: 1rem;
+						}
+					}
+				}
+			}
+		}
+
+		&__left {
+			align-self: center;
+
+			h1 {
+				margin-bottom: 3rem;
+				font-family: var(--font-secondary);
+				font-weight: 500;
+				font-size: calc(3rem + 1vw);
+			}
+
+			p {
+				font-size: calc(1rem + 0.5vw);
+				margin-bottom: 3rem;
+				text-align: left;
+				width: 60%;
+				font-weight: 400;
+
+				@media only screen and (max-width: 1000px) {
+					width: 70%;
+				}
+
+				@media only screen and (max-width: 700px) {
+					width: 100%;
+				}
+			}
+
+			a {
+				text-decoration: none;
+				color: #fff;
+				font-weight: 700;
+				font-size: calc(1.2rem + 0.5vw);
+			}
+		}
+	}
+}
+
+.footer {
+	margin-top: auto;
+	text-align: center;
+	font-family: var(--font-primary);
+	font-size: 1.4rem;
+	color: #a9a9a9;
+
+	&__username {
+		font-weight: 700;
+	}
+}
