@@ -101,7 +101,7 @@ span.material-icons {
 	@media only screen and (max-width: 1000px) {
 		display: block;
 		cursor: pointer;
-		position: fixed;
+		position: absolute;
 		font-size: 4rem;
 		top: 4rem;
 		right: 4rem;
@@ -110,6 +110,7 @@ span.material-icons {
 }
 
 .main {
+	margin-bottom: 30rem;
 	& .modern-interior {
 		display: flex;
 
